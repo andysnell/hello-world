@@ -1,0 +1,56 @@
+{
+    "name": "wickedbyte/hello-world",
+    "description": "Example Composer Project - Longhorn PHP 2023",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "Andy Snell",
+            "email": "andy@wickedbyte.com",
+            "homepage": "https://wickedbyte.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "ramsey/devtools": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "WickedByte\\HelloWorld\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WickedByte\\Test\\HelloWorld\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ramsey/composer-repl": true,
+            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true,
+            "captainhook/plugin-composer": true,
+            "ramsey/devtools": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "captainhook": {
+            "force-install": true
+        },
+        "ramsey/conventional-commits": {
+            "configFile": "conventional-commits.json"
+        },
+        "ramsey/devtools": {
+            "command-prefix": "dev",
+            "memory-limit": "-1"
+        }
+    }
+}
